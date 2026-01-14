@@ -37,111 +37,102 @@ kubectl apply -f manifests/persistent-volume.yaml
 kubectl apply -f manifests/persistent-volume-claim.yaml
 kubectl apply -f manifests/storage-app-deployment.yaml
 
-📁 Project Structure
-.
-├── manifests/           # Kubernetes YAML manifests
-├── scripts/            # Utility and monitoring scripts
-
 🔧 Practical Tasks
 
 Task 1: Environment Setup
 
-Verify Kubernetes cluster status
-Create dedicated namespace
-Check available storage classes
+-Verify Kubernetes cluster status
+-Create dedicated namespace
+-Check available storage classes
 
 Task 2: Persistent Storage Creation
 
-Create PersistentVolume with hostPath storage
-Create PersistentVolumeClaim to request storage
-Bind PVC to available PV
+-Create PersistentVolume with hostPath storage-
+-Create PersistentVolumeClaim to request storage
+-Bind PVC to available PV
 
 Task 3: Application Deployment
 
-Deploy application that writes to persistent storage
-Create service for application access
-Monitor data writing in real-time
+-Deploy application that writes to persistent storage
+-Create service for application access
+-Monitor data writing in real-time
 
 Task 4: Data Persistence Verification
 
-Test data persistence across pod restarts
-Delete and recreate pods while preserving data
-Scale applications with persistent storage
+-Test data persistence across pod restarts
+-Delete and recreate pods while preserving data
+-Scale applications with persistent storage
 
 Task 5: Advanced Scenarios
 
-Multiple volume mounting
-Storage monitoring and management
-Troubleshooting common issues
+-Multiple volume mounting
+-Storage monitoring and management
+-Troubleshooting common issues
 
 📊 Monitoring and Management
 
 Included Scripts:
-monitor-storage.sh - Monitor PV/PVC status and usage
-cleanup-storage.sh - Clean up all resources safely
-final-verification.sh - Comprehensive verification script
+-monitor-storage.sh - Monitor PV/PVC status and usage
+-leanup-storage.sh - Clean up all resources safely
+-final-verification.sh - Comprehensive verification script
 
 Best Practices:
-Storage class selection strategies
-
-Resource management and quotas
-Data persistence strategies
-Security considerations
-Monitoring and alerting setup
+-Storage class selection strategies
+-Resource management and quotas
+-Data persistence strategies
+-Security considerations
+-Monitoring and alerting setup
 
 🐛 Troubleshooting
 
 Common Issues:
 1. PVC Stuck in Pending State
-Check available PV capacity
-Verify storage class compatibility
-Review access mode requirements
+#Check available PV capacity
+#Verify storage class compatibility
+#Review access mode requirements
 2. Pod Cannot Mount Volume
-Verify PVC binding status
-Check volume mount paths
-Review RBAC permissions
+#Verify PVC binding status
+#Check volume mount paths
+#Review RBAC permissions
 3. Data Not Persisting
-Confirm PV reclaim policy
-Verify volume mounts
-Check storage class configuration
+#Confirm PV reclaim policy
+#Verify volume mounts
+#Check storage class configuration
 
 - Detailed troubleshooting guide available in documentation/troubleshooting.md.
 
 🧪 Testing
 Run the comprehensive verification:
 
-chmod +x scripts/final-verification.sh
-./scripts/final-verification.sh
+- chmod +x scripts/final-verification.sh
+- ./scripts/final-verification.sh
 
 🧹 Cleanup
 Remove all resources:
-chmod +x scripts/cleanup-storage.sh
-./scripts/cleanup-storage.sh
+- chmod +x scripts/cleanup-storage.sh
+- ./scripts/cleanup-storage.sh
 
 📚 Learning Outcomes
 After completing this practical, you will understand:
-How Kubernetes manages persistent storage
-The relationship between PVs, PVCs, and StorageClasses
-Data persistence strategies for stateful applications
-Best practices for storage management in production
-Troubleshooting techniques for storage issues
+-How Kubernetes manages persistent storage
+-The relationship between PVs, PVCs, and StorageClasses
+-Data persistence strategies for stateful applications
+-Best practices for storage management in production
+-Troubleshooting techniques for storage issues
 
 🎓 Real-World Applications
 Database deployments (PostgreSQL, MySQL, MongoDB)
-Content management systems
-File sharing applications
-Data analytics pipelines
-Backup and recovery systems
+-Content management systems
+-File sharing applications
+-Data analytics pipelines
+-Backup and recovery systems
 
 🤝 Contributing
-Fork the repository
-Create a feature branch
-Commit your changes
-Push to the branch
-Open a Pull Request
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+-Fork the repository
+-Create a feature branch
+-Commit your changes
+-Push to the branch
+-Open a Pull Request
 
 Acknowledgments
 Kubernetes Documentation
